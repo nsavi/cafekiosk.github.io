@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Cafe Kiosk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-page">
+        <div class="welcome-container">
+            <p class="logo">☕ Mini Cafe Kiosk Service</p>
+            <h1 class="welcome-title">Welcome Mini Cafe</h1>
+            <p class="slogan">Experience the Perfect Blend</p>
+            <p class="welcome-instructions">Please enter your name:</p>
+            <input type="text" id="customer-name" placeholder="Your Name" class="name-input">
+            <button id="start-order" class="start-button">Start Your Order</button>
+        </div>
+    </div>
+    
+
+    <div id="order-page" style="display: none;">
+        <header>
+            <h1>Mini Cafe Kiosk</h1>
+        </header>
+        <main>
+            <div class="menu-container">
+                <section class="menu">
+                    <h2>Menu</h2>
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Cappuccino                 </span>
+                                <span class="item-price">$3.50                 </span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Iced Mocha Cookie Crumble  </span>
+                                <span class="item-price">$3.75</span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Mocha Cookie Crumble Latte </span>
+                                <span class="item-price">$3.00</span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- You can continue adding more items following the same structure -->
+                        
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Rock Salted Caramel Latte  </span>
+                                <span class="item-price">$2.50</span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Caffe Americano            </span>
+                                <span class="item-price">$2.75</span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <div class="item-details">
+                                <span class="item-name">Doppio Espresso            </span>
+                                <span class="item-price">$4.75</span>
+                                <button class="add-to-cart">Add</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-control decrement">-</button>
+                                    <input type="number" class="quantity" value="0" min="0">
+                                    <button class="quantity-control increment">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Add more menu items here -->
+                    </ul>
+                </section>
+                <section class="cart">
+                    <h2>Cart</h2>
+                    <p>Hello, <span id="customer-name-display"></span>! You have <span id="item-count">0</span> item(s) in your cart.</p>
+                    <ul id="cart-items">
+                        <!-- Cart items will be displayed here dynamically through JavaScript -->
+                    </ul>
+                    <div class="options">
+                        <label for="eat-in">Eat-In</label>
+                        <input type="radio" id="eat-in" name="order-type" value="Eat-In">
+                        <label for="take-out">Take-Out</label>
+                        <input type="radio" id="take-out" name="order-type" value="Take-Out">
+                    </div>
+                    <button id="checkout">Checkout</button>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Receipt Page (keep this part as it is) -->
+    <!-- Receipt Page (keep this part as it is) -->
+    <!-- Your existing code for the welcome and order pages remains unchanged -->
+
+    <!-- Receipt Page -->
+    <!-- Receipt Page -->
+    <div id="receipt-page" style="display: none;">
+        <h2>Receipt</h2>
+        <p>Order for <span id="customer-name-receipt"></span> - Token #: <span id="token-number"></span></p>
+        <ul id="receipt-items">
+            <!-- Receipt items will be displayed here -->
+        </ul>
+        <p>Total: $<span id="total-price-receipt">0.00</span></p>
+        <button id="print-receipt" class="print-button">Print Receipt</button> <!-- Add this Print button -->
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
